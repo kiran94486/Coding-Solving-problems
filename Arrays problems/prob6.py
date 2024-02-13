@@ -36,3 +36,24 @@ print(sort_array)
 # Selection sort has a time complexity of O(n^2) in the worst and average case.
 # Does not work well on large datasets.
 # Does not preserve the relative order of items with equal keys which means it is not stable.
+
+
+
+#Example2
+
+def sel_sort1(arr,len):
+    for i in range(len):
+        minin_index=i
+        for j in range(i+1,len):
+            if arr[minin_index]>arr[j]:
+                minin_index=j
+
+        arr[i],arr[minin_index]=arr[minin_index],arr[i]
+
+    return arr
+
+
+arr=[5,8,2,4,9,4,1]
+len=len(arr)
+selectionsort=sel_sort1(arr,len)
+print("Sorted array:"+ str(selectionsort))
