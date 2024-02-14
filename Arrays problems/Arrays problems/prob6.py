@@ -57,3 +57,24 @@ arr=[5,8,2,4,9,4,1]
 len=len(arr)
 selectionsort=sel_sort1(arr,len)
 print("Sorted array:"+ str(selectionsort))
+
+
+
+
+#example 3
+
+def sel(array,n_size):
+    for i in range(n_size):
+        minimum=i
+        for j in range(i+1,n_size):
+            if array[minimum]>array[j]:
+                minimum=j
+        #swapping
+        array[i],array[minimum]=array[minimum],array[i]
+
+    return array
+
+array=[7,4,9,2,6,4,1]
+n_size=len(array)
+seelle=sel(array,n_size)
+print("Sorted array :"+str(seelle))
