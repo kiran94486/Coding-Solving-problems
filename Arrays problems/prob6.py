@@ -41,10 +41,10 @@ print(sort_array)
 
 #Example2
 
-def sel_sort1(arr,len):
-    for i in range(len):
+def sel_sort1(arr,lens):
+    for i in range(lens):
         minin_index=i
-        for j in range(i+1,len):
+        for j in range(i+1,lens):
             if arr[minin_index]>arr[j]:
                 minin_index=j
 
@@ -54,6 +54,49 @@ def sel_sort1(arr,len):
 
 
 arr=[5,8,2,4,9,4,1]
-len=len(arr)
-selectionsort=sel_sort1(arr,len)
+lens=len(arr)
+selectionsort=sel_sort1(arr,lens)
 print("Sorted array:"+ str(selectionsort))
+
+
+
+
+#example 3
+
+def sel(array,n_size):
+    for i in range(n_size):
+        minimum=i
+        for j in range(i+1,n_size):
+            if array[minimum]>array[j]:
+                minimum=j
+        #swapping
+        array[i],array[minimum]=array[minimum],array[i]
+
+    return array
+
+array=[7,4,9,2,6,4,1]
+n_size=len(array)
+seelle=sel(array,n_size)
+print("Sorted array :"+str(seelle))
+
+
+#example 4
+def sls(arry,ns):
+    for i in range(ns):
+        mmmid=i
+        for j in range(i+1,ns):
+            if arry[mmmid]>arry[j]:
+                mmmid=j
+        arry[i],arry[mmmid]=arry[mmmid],arry[i]
+        
+    return arry
+
+
+
+arry=[56,32,87,44,21,11]
+ns=len(arry)
+outpt=sls(arry,ns)
+print(outpt)
+
+
+
