@@ -31,17 +31,3 @@ n_size=len(array)
 bub=bubble(array,n_size)
 print("sorted array :"+str(bub))
 
-#Example x
-
-def bubblbl(arry,ns):
-    for i in range(ns):
-        for j in range(0,ns-i-1):
-            if arry[j] > arry[j+1]:
-                arry[j],arry[j+1]=arry[j+1],arry[j]
-    return arry
-
-
-arry=[78,54,66,33,22,66,0]
-ns=len(arry)
-bb=bubblbl(arry,ns)
-print("sorted array = "+str(bb))
